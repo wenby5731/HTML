@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-model</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: auto;
+            /* display: flex;
+            flex-wrap: wrap; */
+            /* border: 1px solid red */
+        }
+
+        .box {
+            /* 內容寬94
+            box-sizing: content-box;
+            width: 94px; */
+
+            display: block;
+            /* box-sizing: border-box; */
+            width: 300px;
+            /* line-height: 200%; */
+            text-align: right;
+
+            /* margin-right: 30px; */
+
+            /* background-color: brown; */
+            font-size: 3rem;
+
+
+            /* display: inline-block; */
+            /* margin-left: 50px; */
+
+            /* border可以指定邊框位置 */
+            border: 3px solid blue;
+            padding-left: 100px;
+            padding-right: 100px;
+            /* padding-bottom: 30px; */
+
+            /* 內容區用padding 外邊 margin */
+
+            /* margin-right: auto; */
+            /* margin-bottom: 30px; */
+
+        }
+
+        .box2 {
+            /* display: block; */
+            margin-left: auto;
+        }
+
+        .box3 {
+            margin-right: auto;
+            margin-left: auto;
+            /* margin: auto;   四個方向都置中*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">box</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-direction</title>
+    <style>
+        /* 若未給display:flex為直向排列 */
+        section {
+            display: flex;
+            /* row-reverse ==>從右到左  */
+            flex-direction: row;
+            /* justify-content控制主軸的排列 */
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            /* align-content次軸(多行)的控制 */
+            align-content: flex-start;
+            /* font-size調整大小 */
+            font-size: 2rem;
+            width: 100%;
+            height: 300px;
+            background-color: gray;
+        }
+
+        .box {
+            border: 1px solid red;
+            width: 250px;
+        }
+
+        .box:nth-child(1) {
+            /* width: 200px; */
+            /* font-size: 5rem; */
+            /* grow會長大，但不一定會同寬 */
+            /* flex-grow: 1;
+            flex-basis: 0; */
+            /* 設auto以width為主 */
+            /* flex: 1 1 0; */
+            align-self: flex-end;
+            order: 1;
+
+
+
+        }
+
+        .box:nth-child(2) {
+            /* width: 200px; */
+            /* flex-grow: 1; */
+            /* flex-shrink: 2; */
+            /* flex-basis: 0; */
+            order: 1;
+
+
+        }
+
+        .box:nth-child(3) {
+            /* width: 100px; */
+            /* flex-grow: 1;
+            flex-basis: 0; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <!-- .box{box$}*3 -->
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+        <div class="box">box7</div>
+        <div class="box">box8</div>
+        <div class="box">box9</div>
+    </section>
+</body>
+
+</html>

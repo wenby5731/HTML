@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>width</title>
+    <style>
+        /* 容器都常不會把高寫死 */
+        .wrap {
+            /* min-width最小值 */
+            min-width: 300px;
+            height: auto;
+            min-height: 100px;
+            background-color: gray;
+        }
+
+        .box {
+            width: 100%;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        .wrap2 {
+            max-width: 200px;
+            height: 400px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box"></div>
+    </div>
+
+    <div class="wrap2">
+        <div class="box2"></div>
+    </div>
+</body>
+
+</html>

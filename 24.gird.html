@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        /* nth-child==>代表順序，可以不用給class或id */
+        section:nth-child(1) {
+            height: 500px;
+            display: grid;
+            /* grid-template-columns: 240px auto ==>設定第一個寬為240px，第二個自動 ，若設定1fr,1fr 就變成1:1的概念*/
+            grid-template-columns: 1fr 2fr 1fr;
+            /* grid-template-rows: 100px 200px 1fr=>高度分別為100,200,1fr(fraction分數/權重) */
+            grid-template-rows: 100px 2fr;
+            row-gap: 5px;
+            column-gap: 5px;
+            /* gap: 5px 5px; */
+        }
+
+        .box {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <!-- .box{box$}*6  =>快速產生 -->
+        <section>
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+            <div class="box">box4</div>
+            <div class="box">box5</div>
+            <div class="box">box6</div>
+        </section>
+        <section>section2</section>
+        <section>section3</section>
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>

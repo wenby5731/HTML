@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+
+    <style>
+        section {
+            height: 1000vh;
+        }
+
+        .wrap2 {
+            width: 800px;
+            height: 800px;
+            background-color: black;
+            position: relative;
+        }
+
+        .wrap {
+            /* absolute絕對位置-->先動爸爸的50%，再動自己的50%。就會置中 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            /* 絕對置中(X,Y):transform: translate(-50%, -50%); */
+            transform: translate(-50%, -50%);
+
+            width: 300Px;
+            height: 300px;
+            background-color: cornflowerblue;
+
+        }
+
+        .box {
+            width: auto;
+            height: auto;
+            background-color: turquoise;
+            position: absolute;
+            /* 同時存在right、top、left、bottom的指令，會以left、top為優先，主要為了調整大小*/
+            right: 10px;
+            top: 50px;
+            left: 10px;
+            bottom: 20px;
+
+            /* position: relative相對位置 */
+            /* position: relative; */
+            /* left: 50px;
+            top: 50px; */
+            /* left: 210px; */
+            z-index: 1;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* position: relative;
+            z-index: 1; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap2">
+        <div class="wrap">
+            <div class="box">box1</div>
+            <div class="box2">box2</div>
+        </div>
+    </div>
+
+
+    <section></section>
+    <section></section>
+    <section></section>
+</body>
+
+</html>

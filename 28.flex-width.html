@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 在父層下flex,子層若未設定寬，則以內容寬決定==>width>content */
+        .d-flex {
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .box {
+            /* 若設有flex-basis，會覆蓋width ==>
+            max-width/min-width > flex-width > width > content*/
+            width: 100px;
+            flex-basis: 50px;
+            max-width: 150px;
+            min-width: 120px;
+            background-color: plum;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex">
+        <div class="box">box123</div>
+    </div>
+</body>
+
+</html>

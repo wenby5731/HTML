@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>normann</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: black;
+            align-items: center;
+
+        }
+
+        header>div {
+            margin-bottom: 10px;
+        }
+
+        .left {
+            display: flex;
+
+        }
+
+        .middle a {
+            /* color: #fff; */
+            text-decoration: none;
+            align-content: center;
+
+        }
+
+        .right button {
+            padding: 10px 20px;
+        }
+
+        .nav-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        @media screen and(main-width:768px) {
+            .nav-area {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            header .container {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+
+            }
+
+            .middle {
+                margin-left: auto;
+                margin-right: auto;
+
+            }
+        }
+
+        /* heroSection */
+
+        #heroSection {
+            margin-bottom: 100px;
+        }
+
+        #heroSection img {
+            width: 100%;
+
+        }
+
+        @media screen and(min-width:769px) {
+            #heroSection
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div>
+                <div class="left">
+                    <img src="./normann-imgs-main/logo-white.svg" alt="">
+                </div>
+                <div class="middle">
+                    <a href="#">Demos</a>
+                    <a href="#">Features</a>
+                    <a href="#">Documentation</a>
+                </div>
+                <div class="right">
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <section id="heroSection">
+            <div class="box">
+                <h1>Normann- Furniture</h1>
+            </div>
+            <div class="box">
+                <img src="./normann-imgs-main/section1/ldp_img-1.png" alt="">
+            </div>
+
+        </section>
+    </main>
+    <nav></nav>
+    <footer></footer>
+</body>
+
+</html>
